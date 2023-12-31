@@ -1,0 +1,111 @@
+/*general styles*/
+
+body{padding: 3em;background-color: #ccc;}
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+
+
+/*slideshow styles*/
+
+.slideshow {
+  width: 625px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: solid 1px white;
+}
+
+.slideshow-container {
+  width: 2500px;
+  font-size: 0;
+  transition: 1s ease;
+  height: 225px;
+}
+
+.slideshow-container:hover {
+  animation-play-state: paused;
+}
+
+img, .text-container {
+  width: 625px;
+  height: auto;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+}
+
+.text-container {
+  height: 225px;
+  position: relative;
+}
+
+
+p {
+  position: relative;
+  top: -45%;
+  padding: 5px;
+}
+
+.slide {
+  animation: slide 24s ease infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  
+  12.5% {
+    transform: translateX(0%);
+  }
+  
+  25% {
+    transform: translateX(-25%);
+  }
+  
+  37.5% {
+    transform: translateX(-25%);
+  }
+  
+  50% {
+    transform: translateX(-50%);
+  }
+  
+  62.5% {
+    transform: translateX(-50%);
+  }
+  
+  75% {
+    transform: translateX(-75%);
+  }
+  
+  87.5% {
+    transform: translateX(-75%);
+  }
+  
+  99% {
+    transform: translateX(-75%);
+  }
+  
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.p {
+  margin-top: 140px;
+  text-align: center;
+}
+<!--hovering over the images will pause the slideshow -->
+
+<section class="slideshow">
+  <div class="slideshow-container slide">
+    <img src="http://placeimg.com/625/225/any"/>
+    <div class="text-container">
+      <p> I work with text too! And I'm just testing length here and stuff it's cool you know because that's important to do I guess hey did I ever tell you about that time that I did that stuff with the thing</p>
+    </div>
+    <img src="http://placeimg.com/625/225/animals"/>
+    <img src="http://placeimg.com/625/225/arch"/>
+  </div>
+</section>
+
+<p class="p">Demo by Tim Evko. <a href="http://www.sitepoint.com/you-dont-need-javascript-for-that" target="_blank">See article</a>.</p>
